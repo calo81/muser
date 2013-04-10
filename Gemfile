@@ -42,3 +42,8 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'mongoid'
 gem 'devise'
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_girl'
+end
