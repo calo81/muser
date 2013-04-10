@@ -35,7 +35,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-gem 'rspec-rails'
+gem 'rspec-rails', :group => [:test, :development]
 gem 'feedzirra'
 gem 'twitter-bootstrap-rails'
 gem 'omniauth'
