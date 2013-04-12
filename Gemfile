@@ -35,6 +35,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
 gem 'rspec-rails'
 gem 'feedzirra'
 gem 'twitter-bootstrap-rails'
