@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -35,11 +35,18 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-
-gem 'rspec-rails'
 gem 'feedzirra'
 gem 'twitter-bootstrap-rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'mongoid'
 gem 'devise'
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_girl'
+  gem 'rspec-rails'
+  gem 'cucumber'
+  gem 'cucumber-rails', '1.3.1'
+  gem 'selenium-webdriver'
+end
