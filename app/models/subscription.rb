@@ -17,6 +17,7 @@ class Subscription
     subscription = self.new(JSON.parse(feed.to_json))
     subscription.user = user
     subscription.save
+    subscription
   end
 
 end

@@ -41,6 +41,8 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'mongoid'
 gem 'devise'
+gem 'ember-rails'
+gem 'handlebars_assets'
 
 group :test do
   gem 'database_cleaner'
