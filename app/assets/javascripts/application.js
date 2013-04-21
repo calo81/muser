@@ -20,3 +20,4 @@
 //= require muser
 //= require_tree .
 Muser = Ember.Application.create();
+

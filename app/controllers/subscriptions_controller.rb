@@ -2,8 +2,10 @@ class SubscriptionsController < AuthenticatedController
   respond_to :json
 
   def index
-   subscriptions = Subscription.find_by(user: current_user) || []
-   render :json => subscriptions.as_json, :layout => false
+    subscriptions = Subscription.find_by(user: current_user) || {:subscriptions => []}
+    subscriptions = [subscriptions] unless subscriptions.is_a?(Array)
+    subscriptions = {:subscriptions => subscriptions}
+    render :json => subscriptions
   end
 
   def show

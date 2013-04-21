@@ -1,8 +1,9 @@
 $(function() {
-    setTimeout(updateSubscriptions, 100000);
+    setTimeout(updateSubscriptions, 1000);
 });
 
 function updateSubscriptions () {
-  Console.log("polling");
-  setTimeout(updateSubscriptions, 100000);
+  //var subscriptions = Muser.Subscription.find();
+  //Muser.subscriptionsController.set('content', subscriptions);
+  //setTimeout(updateSubscriptions, 100000);
 }
