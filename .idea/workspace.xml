@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0031f19-1fca-47f5-9378-e1e484fbee46" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/subscriptions/index.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions/index.handlebars" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/subscriptions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/subscriptions/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/muser.iml" afterPath="$PROJECT_DIR$/.idea/muser.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/router.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/router.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/subscription.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/subscription.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/subscriptions.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/subscriptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/subscription.rb" afterPath="$PROJECT_DIR$/app/models/subscription.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/subscription_spec.rb" afterPath="$PROJECT_DIR$/spec/models/subscription_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/subscriptions_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/subscriptions_controller_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="muser.iws" />
@@ -30,7 +19,7 @@
     <file path="/omniauth.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365546946980" ignored="false" />
     <file path="/sessions_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365937110291" ignored="false" />
     <file path="/user.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365957368312" ignored="false" />
-    <file path="/fragment.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365957927158" ignored="false" />
+    <file path="/fragment.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366652435813" ignored="false" />
     <file path="/home_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366047528877" ignored="false" />
     <file path="/application_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365707818438" ignored="false" />
     <file path="/Dummy.txt" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366539016593" ignored="false" />
@@ -42,7 +31,7 @@
     <file path="/devise.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365950933831" ignored="false" />
     <file path="/authenticated_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366047858073" ignored="false" />
     <file path="/subscriptions_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366232071624" ignored="false" />
-    <file path="/subscription.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366221579255" ignored="false" />
+    <file path="/subscription.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366577468634" ignored="false" />
     <file path="/subscriptions_controller_spec.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365958407674" ignored="false" />
     <file path="/subscription_spec.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365958492196" ignored="false" />
     <file path="/controller_macros.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365958371862" ignored="false" />
@@ -128,13 +117,13 @@
     <favorites_list name="muser" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.39193085">
+    <splitter split-orientation="horizontal" split-proportion="0.44668588">
       <split-first>
         <leaf>
-          <file leaf-file-name="subscriptions_route.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="subscriptions_route.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="78" selection-start="170" selection-end="170" vertical-scroll-proportion="0.06849315">
+                <state line="2" column="78" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -152,7 +141,16 @@
           <file leaf-file-name="subscription.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/subscription.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                <state line="3" column="27" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ember-data.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194/gems/ember-rails-0.10.0/vendor/ember/production/ember-data.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="3326" column="37" selection-start="99661" selection-end="99670" vertical-scroll-proportion="-6.4">
                   <folding />
                 </state>
               </provider>
@@ -167,10 +165,28 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="subscriptions_controller.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="subscriptions_controller.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="4" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+                <state line="5" column="11" selection-start="229" selection-end="229" vertical-scroll-proportion="0.15822785">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="subscription.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="20" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="rescue.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="30" column="0" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -180,28 +196,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="35" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/router.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="3" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="application.handlebars" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/application.handlebars">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="0" selection-start="0" selection-end="60" vertical-scroll-proportion="0.0">
+                <state line="2" column="58" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -216,10 +214,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="62" column="34" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.6062802">
+                <state line="54" column="73" selection-start="2041" selection-end="2041" vertical-scroll-proportion="-5.5833335">
                   <folding />
                 </state>
               </provider>
@@ -237,7 +235,34 @@
           <file leaf-file-name="subscriptions_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="68" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+                <state line="20" column="61" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="subscriptions_controller_spec.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/spec/controllers/subscriptions_controller_spec.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="25" column="30" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="subscription_spec.rb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/spec/models/subscription_spec.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="21" column="99" selection-start="782" selection-end="782" vertical-scroll-proportion="0.7191781">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="24" column="0" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -247,15 +272,6 @@
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="0" column="46" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="application_view.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/application_view.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -294,22 +310,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/subscription.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/store.js" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/application.handlebars" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/subscriptions.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions.handlebars" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/routes/application_route.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/router.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js" />
         <option value="$PROJECT_DIR$/config/mongoid.yml" />
-        <option value="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/router.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/subscription.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/subscription.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" />
+        <option value="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" />
+        <option value="$PROJECT_DIR$/spec/controllers/subscriptions_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/models/subscription_spec.rb" />
       </list>
     </option>
   </component>
@@ -733,7 +749,7 @@
       <recent name="$PROJECT_DIR$/app/assets/javascripts/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: muser">
+  <component name="RunManager" selected="RSpec.subscription_spec">
     <configuration default="false" name="HomeController" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="muser" />
@@ -802,43 +818,10 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="subscription_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="muser" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/subscription_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="subscriptions_controller_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
@@ -874,6 +857,41 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="subscription_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="muser" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/subscription_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -1166,16 +1184,16 @@
       <item index="3" class="java.lang.String" itemvalue="Rails.Development: muser" />
       <item index="4" class="java.lang.String" itemvalue="RSpec.HomeController" />
       <item index="5" class="java.lang.String" itemvalue="RSpec.SubscriptionsController" />
-      <item index="6" class="java.lang.String" itemvalue="RSpec.subscription_spec" />
-      <item index="7" class="java.lang.String" itemvalue="RSpec.subscriptions_controller_spec" />
+      <item index="6" class="java.lang.String" itemvalue="RSpec.subscriptions_controller_spec" />
+      <item index="7" class="java.lang.String" itemvalue="RSpec.subscription_spec" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.subscriptions_controller_spec" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.subscription_spec" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.subscription_spec" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.SubscriptionsController" />
-        <item index="4" class="java.lang.String" itemvalue="RSpec.subscriptions_controller_spec" />
+        <item index="0" class="java.lang.String" itemvalue="RSpec.subscription_spec" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.SubscriptionsController" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.subscriptions_controller_spec" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.subscription_spec" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.subscription_spec" />
       </list>
     </recent_temporary>
   </component>
@@ -1217,7 +1235,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.60077024" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992298" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3414322" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1229,7 +1247,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39956957" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25322813" sideWeight="0.6713555" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25322813" sideWeight="0.6713555" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3286445" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1299,10 +1317,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/sessions_controller.rb</url>
-          <line>3</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194/gems/devise-1.4.9/lib/devise/controllers/helpers.rb</url>
           <line>68</line>
           <option name="timeStamp" value="3" />
@@ -1358,115 +1372,18 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/sessions_controller.rb</url>
-          <line>10</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194/gems/rspec-mocks-2.13.1/lib/rspec/mocks/methods.rb</url>
           <line>14</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/subscription.rb</url>
-          <line>18</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb</url>
-          <line>7</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="25" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194/gems/ember-rails-0.10.0/vendor/ember/production/ember.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12514" column="65" selection-start="341456" selection-end="341456" vertical-scroll-proportion="-12.76" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/application_controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="43" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/application_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/application.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="0" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/subscriptions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="46" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="3" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/application_route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="3" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/subscription.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="4" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="78" selection-start="170" selection-end="170" vertical-scroll-proportion="0.06849315">
+        <state line="2" column="78" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1478,16 +1395,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="68" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+        <state line="2" column="58" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="34" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.6062802">
+        <state line="54" column="73" selection-start="2041" selection-end="2041" vertical-scroll-proportion="-5.5833335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/application_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194/gems/ember-rails-0.10.0/vendor/ember/production/ember-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3326" column="37" selection-start="99661" selection-end="99670" vertical-scroll-proportion="-6.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/subscription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="27" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/application.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="0" selection-end="60" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="61" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/subscriptions_controller_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="30" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="35" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="11" selection-start="229" selection-end="229" vertical-scroll-proportion="0.15822785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/subscription_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="99" selection-start="782" selection-end="782" vertical-scroll-proportion="0.7191781">
           <folding />
         </state>
       </provider>

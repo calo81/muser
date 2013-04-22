@@ -51,8 +51,8 @@
           <div class="well sidebar-nav">
             <div class="subscription-button">
               <%= form_tag('/subscriptions') do |f| %>
-                <%= text_field_tag 'url' %>
-                <%= submit_tag 'Add' %>
+                    {{view Ember.TextField valueBinding="url"}}
+                    <button type="button" {{action "addSubscription" url target="Muser.subscriptionsController"}}>Add Subscription</button>
               <% end %>
             </div>
 
