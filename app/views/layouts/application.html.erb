@@ -59,8 +59,10 @@
             <ul class="nav nav-list">
               <li class="nav-header">Subscriptions</li>
 
-                  {{#each Muser.subscriptionsController}}
-                     <li>{{title}}</li>
+                  {{#each sub in Muser.subscriptionsController}}
+                      <li>
+                          <button type="button" {{action "showEntries" sub target="Muser.subscriptionsController"}}>{{sub.title}}</button>
+                      </li>
                   {{/each}}
 
             </ul>
@@ -69,7 +71,8 @@
         </div><!--/span-->
         <div class="span9">
           <%= bootstrap_flash %>
-          <%= yield %>
+            {{#each entry in Muser.subscriptionController.entries}}
+            {{/each}}
         </div>
       </div><!--/row-->
 
