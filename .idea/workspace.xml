@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0031f19-1fca-47f5-9378-e1e484fbee46" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/subscription.hjs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions.hjs" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/application_controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/routes/application_route.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/subscriptions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions.handlebars" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/application.handlebars" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/application.hjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/application_view.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/application_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/muser.iml" afterPath="$PROJECT_DIR$/.idea/muser.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/muser.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/muser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/router.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscription_controller.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscription_controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/subscription.hjs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/subscription.hjs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="muser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +40,7 @@
     <file path="/a.dummy" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1369593966853" ignored="false" />
     <file path="/store.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366231532110" ignored="false" />
     <file path="/router.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366233464510" ignored="false" />
-    <file path="/subscriptions_route.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1369568644631" ignored="false" />
+    <file path="/subscriptions_route.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1369950172552" ignored="false" />
     <file path="/subscriptions_controller.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1369568615332" ignored="false" />
     <file path="$PROJECT_DIR$/../project_euler/src/TwoPounds.scala" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1368207983461" ignored="false" />
     <file path="/TwoPounds.scala" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1368207738236" ignored="false" />
@@ -191,7 +171,7 @@
       <file leaf-file-name="subscription.hjs" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/subscription.hjs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="49" selection-start="103" selection-end="103" vertical-scroll-proportion="0.037546933">
+            <state line="1" column="21" selection-start="48" selection-end="48" vertical-scroll-proportion="0.018773466">
               <folding />
             </state>
           </provider>
@@ -200,7 +180,7 @@
       <file leaf-file-name="subscriptions_route.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
+            <state line="11" column="44" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -255,7 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions.handlebars" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/application.handlebars" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/muser.js" />
@@ -266,10 +245,11 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/application_view.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions.hjs" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/router.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/application.hjs" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/subscription.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/subscription.hjs" />
       </list>
     </option>
@@ -1541,37 +1521,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="10" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/subscription.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscription_controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="62" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1590,9 +1542,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="62" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/subscription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="10" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="44" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/subscription.hjs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="49" selection-start="103" selection-end="103" vertical-scroll-proportion="0.037546933">
+        <state line="1" column="21" selection-start="48" selection-end="48" vertical-scroll-proportion="0.018773466">
           <folding />
         </state>
       </provider>
