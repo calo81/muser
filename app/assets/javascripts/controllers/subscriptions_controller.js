@@ -1,4 +1,4 @@
-Muser.subscriptionsController = Ember.ArrayController.create({
+Muser.SubscriptionsController = Ember.ArrayController.extend({
     addSubscription: function(url) {
         var subscription = Muser.Subscription.createRecord({
             url: url
@@ -8,7 +8,6 @@ Muser.subscriptionsController = Ember.ArrayController.create({
     },
 
     showEntries: function(record) {
-        Muser.subscriptionController.find(record);
-        alert("cdsc");
+       this.set("selectedSubscription",Muser.Subscription.find(record.get("_id")));
     }
 });

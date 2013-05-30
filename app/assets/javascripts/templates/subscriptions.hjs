@@ -1,0 +1,4 @@
+Subscriptions
+{{#each controller}}
+  {{view Muser.SubscriptionListItemView contentBinding="this"}}
+{{/each}}

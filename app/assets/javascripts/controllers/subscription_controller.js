@@ -1,6 +1,4 @@
-Muser.subscriptionController = Ember.ObjectController.create({
-    content: [],
-    find: function(){
-        alert("rerer");
-    }
+Muser.SubscriptionController = Ember.ObjectController.extend({
+    contentBinding: 'subscriptionsController.selectedSubscription',
+    subscriptionsController: null
 });

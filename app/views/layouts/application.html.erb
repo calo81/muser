@@ -21,7 +21,6 @@
       <%= javascript_include_tag "application" %>
 
   </head>
-  <script type="text/x-handlebars">
   <body>
 
     <div class="navbar navbar-fluid-top">
@@ -50,29 +49,16 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <div class="subscription-button">
-              <%= form_tag('/subscriptions') do |f| %>
-                    {{view Ember.TextField valueBinding="url"}}
-                    <button type="button" {{action "addSubscription" url target="Muser.subscriptionsController"}}>Add Subscription</button>
-              <% end %>
             </div>
 
             <ul class="nav nav-list">
               <li class="nav-header">Subscriptions</li>
-
-                  {{#each sub in Muser.subscriptionsController}}
-                      <li>
-                          <button type="button" {{action "showEntries" sub target="Muser.subscriptionsController"}}>{{sub.title}}</button>
-                      </li>
-                  {{/each}}
-
             </ul>
 
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <%= bootstrap_flash %>
-            {{#each entry in Muser.subscriptionController.entries}}
-            {{/each}}
         </div>
       </div><!--/row-->
 
@@ -83,6 +69,5 @@
     </div> <!-- /container -->
 
   </body>
-  </script>
 </html>
 

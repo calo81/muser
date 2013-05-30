@@ -41,8 +41,12 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'mongoid'
 gem 'devise'
-gem 'ember-rails'
-gem 'handlebars_assets'
+gem 'ember-rails', '0.12.1'
+gem 'ember-source'
+
+group :development do
+  gem 'capistrano', '~> 2.11.2'
+end
 
 group :test do
   gem 'database_cleaner'
