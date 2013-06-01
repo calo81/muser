@@ -1,3 +1,6 @@
 {{#if controller.content}}
-        <h1>{{content}}</h1>
+        {{#each content.entries}}
+         {{view Muser.SubscriptionEntryItemView contentBinding="this"}}
+        {{/each}}
+
     {{/if}}

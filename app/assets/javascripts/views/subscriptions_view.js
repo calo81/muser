@@ -4,21 +4,26 @@ Muser.SubscriptionsView = Ember.View.extend({
 });
 
 Muser.SubscriptionListItemView = Ember.View.extend({
-    template: Ember.Handlebars.compile('' +
-        '{{title}}'),
+    template: Ember.Handlebars.compile('{{title}}'),
 
-    classNames: ['pointer', 'subscriptionListItem'],
+    classNames: ['subscriptionListItem'],
 
-    classNameBindings: "isSelected",
 
     click: function() {
         this.get('controller').showEntries(this.get('content'));
-    },
+    }
 
-    isSelected: function() {
-        return this.get('controller.selectedSubscription.name') === this.get('content.name');
-    }.property('controller.selectedSubscription.name')
+});
 
+Muser.SubscriptionEntryItemView = Ember.View.extend({
+    template: Ember.Handlebars.compile('{{title}}'),
+    tagName: 'h3',
+    classNames: ['subscriptionEntryItem'],
+
+
+    click: function() {
+        this.get('controller').showEntryContent(this.get('content'));
+    }
 
 });
 

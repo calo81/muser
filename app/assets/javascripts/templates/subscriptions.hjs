@@ -1,4 +1,7 @@
-Subscriptions
+<li class="nav-header">Subscriptions</li>
+
 {{#each controller}}
-  {{view Muser.SubscriptionListItemView contentBinding="this"}}
+  <li>
+    {{view Muser.SubscriptionListItemView contentBinding="this"}}
+  </li>
 {{/each}}

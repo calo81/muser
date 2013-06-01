@@ -1,5 +1,5 @@
 Muser.SubscriptionsController = Ember.ArrayController.extend({
-    addSubscription: function(url) {
+    addSubscription: function (url) {
         var subscription = Muser.Subscription.createRecord({
             url: url
         });
@@ -7,7 +7,7 @@ Muser.SubscriptionsController = Ember.ArrayController.extend({
         subscription.get('transaction').commit();
     },
 
-    showEntries: function(record) {
-       this.set("selectedSubscription",Muser.Subscription.find(record.get("_id")));
+    showEntries: function (record) {
+        this.set("selectedSubscription", Muser.Subscription.find(record.get("_id")));
     }
 });

@@ -1,0 +1,4 @@
+{{#if controller.content}}
+   <h1>{{title}}</h1>
+   <h3>{{summary}}</h3>
+{{/if}}

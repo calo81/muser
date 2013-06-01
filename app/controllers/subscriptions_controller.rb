@@ -8,7 +8,7 @@ class SubscriptionsController < AuthenticatedController
   end
 
   def show
-    render :json =>  Subscription.find(params[:id])
+    render :json =>  {:subscription => Subscription.find(params[:id])}
   end
 
   def create

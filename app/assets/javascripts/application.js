@@ -20,5 +20,14 @@
 //= require_self
 //= require muser
 //= require_tree .
+
 Muser = Ember.Application.create({LOG_TRANSITIONS: true});
+DS.RESTAdapter.registerTransform('raw', {
+    deserialize: function(serialized) {
+        return serialized;
+    },
+    serialize: function(deserialized) {
+        return deserialized;
+    }
+});
 
