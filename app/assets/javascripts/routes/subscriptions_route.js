@@ -3,7 +3,5 @@ Muser.SubscriptionsRoute = Ember.Route.extend({
         controller.set('content', Muser.Subscription.find());
         var selectedSubscriptionController = this.controllerFor('subscription');
         selectedSubscriptionController.set('subscriptionsController', controller);
-        var selectedEntryController = this.controllerFor('entry');
-        selectedEntryController.set('subscriptionController', selectedSubscriptionController);
     }
 });
