@@ -41,7 +41,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'mongoid'
 gem 'devise'
-gem 'ember-rails', '0.12.1'
+gem 'ember-rails'
 gem 'ember-source'
 
 group :development do

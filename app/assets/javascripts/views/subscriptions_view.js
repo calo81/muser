@@ -3,6 +3,12 @@ Muser.SubscriptionsView = Ember.View.extend({
     elementId: 'subscriptions'
 });
 
+Muser.TextField = Ember.TextField.extend(Ember.TargetActionSupport, {
+    insertNewline: function() {
+        this.triggerAction();
+    }
+});
+
 Muser.SubscriptionListItemView = Ember.View.extend({
     template: Ember.Handlebars.compile('{{title}}'),
 

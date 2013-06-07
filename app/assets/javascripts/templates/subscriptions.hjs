@@ -1,4 +1,8 @@
 <li class="nav-header">Subscriptions</li>
+{{view Muser.TextField target="controller" action="addSubscription" valueBinding="controller.newSubscriptionName"}}
+<button {{action "addSubscription"}}>
+            Add Subscription
+</button>
 
 {{#each controller}}
   <li>
