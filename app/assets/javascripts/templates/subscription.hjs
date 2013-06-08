@@ -1,7 +1,11 @@
 {{#if controller.content}}
         {{#each content.entries}}
-         {{view Muser.SubscriptionEntryItemView contentBinding="this"}}
-         {{view Muser.EntryView contentBinding="this"}}
+        <div style="border:1px solid grey;">
+         {{#view Muser.SubscriptionEntryItemView contentBinding="this"}}
+           {{view.content.title}}
+           {{view Muser.EntryView contentBinding="this" isVisibleBinding="view.showEntry"}}
+         {{/view}}
+         </div>
         {{/each}}
 
     {{/if}}
