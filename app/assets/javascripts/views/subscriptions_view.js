@@ -23,10 +23,9 @@ Muser.SubscriptionListItemView = Ember.View.extend({
 
 Muser.SubscriptionEntryItemView = Ember.View.extend({
     template: Ember.Handlebars.compile('{{title}}'),
-    tagName: 'h3',
+    tagName: 'h6',
     classNames: ['subscriptionEntryItem'],
     showEntry: false,
-
 
     click: function() {
         var value = !this.get("showEntry")
