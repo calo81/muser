@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0031f19-1fca-47f5-9378-e1e484fbee46" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscription_controller.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscription_controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/subscriptions.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/subscriptions.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/subscription.rb" afterPath="$PROJECT_DIR$/app/models/subscription.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="muser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,7 +14,7 @@
     <file path="/omniauth.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365546946980" ignored="false" />
     <file path="/sessions_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365937110291" ignored="false" />
     <file path="/user.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365957368312" ignored="false" />
-    <file path="/fragment.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366652435813" ignored="false" />
+    <file path="/fragment.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1370809394087" ignored="false" />
     <file path="/home_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366047528877" ignored="false" />
     <file path="/application_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365707818438" ignored="false" />
     <file path="/Dummy.txt" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1370688192261" ignored="false" />
@@ -24,8 +25,8 @@
     <file path="/application.html.erb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1369576282074" ignored="false" />
     <file path="/devise.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365950933831" ignored="false" />
     <file path="/authenticated_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366047858073" ignored="false" />
-    <file path="/subscriptions_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1370089201773" ignored="false" />
-    <file path="/subscription.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366577468634" ignored="false" />
+    <file path="/subscriptions_controller.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1370808382947" ignored="false" />
+    <file path="/subscription.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1370809821651" ignored="false" />
     <file path="/subscriptions_controller_spec.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365958407674" ignored="false" />
     <file path="/subscription_spec.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365958492196" ignored="false" />
     <file path="/controller_macros.rb" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1365958371862" ignored="false" />
@@ -42,7 +43,7 @@
     <file path="/store.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366231532110" ignored="false" />
     <file path="/router.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1366233464510" ignored="false" />
     <file path="/subscriptions_route.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1370091261756" ignored="false" />
-    <file path="/subscriptions_controller.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1370462091289" ignored="false" />
+    <file path="/subscriptions_controller.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1370810650384" ignored="false" />
     <file path="$PROJECT_DIR$/../project_euler/src/TwoPounds.scala" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1368207983461" ignored="false" />
     <file path="/TwoPounds.scala" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1368207738236" ignored="false" />
     <file path="/subscription_controller.js" changelist="e0031f19-1fca-47f5-9378-e1e484fbee46" time="1370793183532" ignored="false" />
@@ -131,25 +132,52 @@
       <file leaf-file-name="subscription_controller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscription_controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="30" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
+            <state line="7" column="0" selection-start="231" selection-end="635" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="subscriptions_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="subscriptions_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
+            <state line="11" column="4" selection-start="312" selection-end="312" vertical-scroll-proportion="0.21072797">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="subscription.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mongoid.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/mongoid.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/ember-rails-0.11.1/lib/ember/handlebars/template.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subscription.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="10" selection-start="238" selection-end="270" vertical-scroll-proportion="0.33382788">
+            <state line="28" column="0" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feed.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/feedzirra-0.0.24/lib/feedzirra/feed.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="124" column="0" selection-start="5376" selection-end="5376" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -185,37 +213,8 @@
       <file leaf-file-name="subscriptions_controller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="36" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+            <state line="19" column="26" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subscriptions.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/subscriptions.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="19" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subscription.hjs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/subscription.hjs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="40" selection-start="370" selection-end="370" vertical-scroll-proportion="-6.25">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -242,14 +241,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/router.js" />
-        <option value="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/models/subscription.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions.hjs" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/application.hjs" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/entry_controller.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/entry_view.js" />
@@ -258,6 +254,9 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/subscriptions.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/subscription_controller.js" />
+        <option value="$PROJECT_DIR$/app/models/subscription.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js" />
       </list>
     </option>
   </component>
@@ -331,6 +330,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -346,6 +373,124 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -853,14 +998,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1349" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.60077024" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34118602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34118602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -873,8 +1018,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39956957" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2529833" sideWeight="0.5702681" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42973194" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2529833" sideWeight="0.65881395" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42973194" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1039,11 +1184,6 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb</url>
-          <line>4</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/ember-rails-0.12.1/lib/ember/handlebars/template.rb</url>
           <line>51</line>
           <option name="timeStamp" value="33" />
@@ -1054,31 +1194,10 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="36" />
+      <option name="time" value="41" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/application.hjs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="13" selection-start="1063" selection-end="1079" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/application_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/subscriptions.hjs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="66" selection-start="234" selection-end="234" vertical-scroll-proportion="-2.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/subscriptions_route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="82" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
@@ -1123,13 +1242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="35" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/assets/ember/development/ember-data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1575" column="37" selection-start="45263" selection-end="45277" vertical-scroll-proportion="-9.68">
@@ -1144,30 +1256,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js">
+    <entry file="file://$PROJECT_DIR$/config/mongoid.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscription_controller.js">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/ember-rails-0.11.1/lib/ember/handlebars/template.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/feedzirra-0.0.24/lib/feedzirra/feed.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
+        <state line="124" column="0" selection-start="5376" selection-end="5376" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="10" selection-start="238" selection-end="270" vertical-scroll-proportion="0.33382788">
+        <state line="28" column="0" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/subscriptions_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="35" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscription_controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="231" selection-end="635" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/subscriptions_controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="26" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="4" selection-start="312" selection-end="312" vertical-scroll-proportion="0.21072797">
           <folding />
         </state>
       </provider>

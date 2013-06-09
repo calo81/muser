@@ -10,6 +10,15 @@ Muser.SubscriptionsController = Ember.ArrayController.extend({
     },
 
     showEntries: function (record) {
-        this.set("selectedSubscription", Muser.Subscription.find(record.get("_id")));
+        var controller = this;
+        var store = DS.get('defaultStore');
+        var adapter = store.adapterForType("Muser.Subscription");
+
+        return $.ajax("/subscriptions/"+record.id, "GET").
+            then(function(json){
+                adapter.didFindRecord(store, Muser.Subscription, json, record.id);
+                controller.set("selectedSubscription", record);
+            });
+
     }
 });
