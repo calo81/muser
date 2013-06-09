@@ -1,6 +1,7 @@
 Muser.SubscriptionsView = Ember.View.extend({
     templateName: 'subscriptions',
-    elementId: 'subscriptions'
+    elementId: 'subscriptions',
+    classNames: ['scrollable']
 });
 
 Muser.TextField = Ember.TextField.extend(Ember.TargetActionSupport, {
@@ -36,5 +37,15 @@ Muser.SubscriptionEntryItemView = Ember.View.extend({
 
 Muser.SubscriptionView = Ember.View.extend({
     templateName: 'subscription',
-    elementId: 'subscription'
+    elementId: 'subscription',
+    classNames: ['scrollable'],
+
+    didInsertElement: function() {
+        var controller = this.get("controller");
+        $("#subscription").bind("scroll", function() {
+            if($(this).scrollTop() >= $(this)[0].scrollHeight - $(this).outerHeight() - 10) {
+                controller.findMore();
+            }
+        });
+    }
 });
