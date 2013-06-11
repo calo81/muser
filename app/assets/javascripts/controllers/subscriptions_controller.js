@@ -9,6 +9,14 @@ Muser.SubscriptionsController = Ember.ArrayController.extend({
         this.set('newSubscriptionName', null);
     },
 
+    remove: function() {
+        var selectedSubscription = this.get('selectedSubscription');
+        if (selectedSubscription) {
+            this.get('content').removeObject(selectedSubscription);
+            this.set('selectedNote', null);
+        }
+        $("#confirmDeleteConfirmDialog").modal('hide');
+    },
     showEntries: function (record) {
         var controller = this;
         var store = DS.get('defaultStore');

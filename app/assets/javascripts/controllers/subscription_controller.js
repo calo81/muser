@@ -2,7 +2,8 @@ Muser.SubscriptionController = Ember.ObjectController.extend({
     contentBinding: 'subscriptionsController.selectedSubscription',
     subscriptionsController: null,
     visibleEntry: false,
-    page: 1,
+    page: 0,
+
 
     findMore: function(){
         var controller = this;

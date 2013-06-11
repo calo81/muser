@@ -9,10 +9,10 @@ class SubscriptionsController < AuthenticatedController
 
   def show
     if(params[:page])
-      subscription = Subscription.find(params[:id],{slice: [ params[:page].to_i * 20, 20 ] })
+      subscription = (Subscription.where(:id => params[:id]).slice({:entries => [ params[:page].to_i * 25, 25 ]}).first)
     else
-      subscription = Subscription.find(params[:id])
-      subscription.reload
+      Subscription.find(params[:id]).reload
+      subscription = (Subscription.where(:id => params[:id]).slice({:entries => [0, 25]}).first)
     end
     render :json =>  {:subscription => subscription}
   end

@@ -15,8 +15,8 @@ Muser.SubscriptionListItemView = Ember.View.extend({
 
     classNames: ['subscriptionListItem'],
 
-
     click: function() {
+        this.get('controller').set('selectedSubscription', this.get('content'));
         this.get('controller').showEntries(this.get('content'));
     }
 
