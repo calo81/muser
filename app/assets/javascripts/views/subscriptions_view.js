@@ -11,13 +11,26 @@ Muser.TextField = Ember.TextField.extend(Ember.TargetActionSupport, {
 });
 
 Muser.SubscriptionListItemView = Ember.View.extend({
-    template: Ember.Handlebars.compile('{{title}}'),
 
     classNames: ['subscriptionListItem'],
+    focused: false,
 
     click: function() {
         this.get('controller').set('selectedSubscription', this.get('content'));
         this.get('controller').showEntries(this.get('content'));
+    },
+
+    deleteClicked: function(){
+        this.get('controller').set('selectedSubscription', this.get('content'));
+        this.get('controller').remove();
+    },
+
+    mouseEnter: function(){
+       this.set("focused",true);
+    },
+
+    mouseLeave: function(){
+        this.set("focused",false);
     }
 
 });

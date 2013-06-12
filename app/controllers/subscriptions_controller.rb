@@ -27,4 +27,9 @@ class SubscriptionsController < AuthenticatedController
       render :json => {error: 'Incorrect subscription request'}, :status => 422
     end
   end
+
+  def destroy
+    Subscription.find(params[:id]).destroy
+    render :json => {message: 'OK'}, :status => 204
+  end
 end

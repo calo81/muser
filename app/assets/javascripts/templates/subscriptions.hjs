@@ -6,9 +6,11 @@
 
 {{#each controller}}
   <li>
-    {{view Muser.SubscriptionListItemView contentBinding="this"}}
-      <button {{action "remove" target="controller"}} class="btn">
-         Delete
-      </button>
+    {{#view Muser.SubscriptionListItemView contentBinding="this"}}
+    {{view.content.title}}
+    {{#view Ember.Button target="view" action="deleteClicked" isVisibleBinding="view.focused"}}
+            Delete
+    {{/view}}
+    {{/view}}
   </li>
 {{/each}}
