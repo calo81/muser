@@ -27,6 +27,7 @@ Muser.SubscriptionsController = Ember.ArrayController.extend({
             then(function(json){
                 adapter.didFindRecord(store, Muser.Subscription, json, record.id);
                 controller.set("selectedSubscription", record);
+                controller.controllerFor("subscription").set("page",0);
             });
 
     }
