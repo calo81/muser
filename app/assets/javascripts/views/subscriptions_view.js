@@ -36,14 +36,28 @@ Muser.SubscriptionListItemView = Ember.View.extend({
 });
 
 Muser.SubscriptionEntryItemView = Ember.View.extend({
-    template: Ember.Handlebars.compile('{{title}}'),
-    tagName: 'h6',
-    classNames: ['subscriptionEntryItem'],
+    tagName: 'div',
+    subscriptionEntryItem: 'subscriptionEntryItem',
+    visited: "non-visited",
     showEntry: false,
 
     click: function() {
         var value = !this.get("showEntry")
         this.set('showEntry',value);
+        this.get("controller").markViewed(this.get("content"));
+        //Two hours trying to make the binding work and it didn't work at all. So hack it!!
+        //this.set("visited","yes-visited");
+        var element = $("#"+this.get("elementId")+" div.non-visited");
+        element.removeClass("non-visited")
+        element.addClass("yes-visited")
+    },
+
+    didInsertElement: function() {
+        if(this.get("content")["viewed"]){
+            var element = $("#"+this.get("elementId")+" div.non-visited");
+            element.removeClass("non-visited");
+            element.addClass("yes-visited");
+        }
     }
 
 });

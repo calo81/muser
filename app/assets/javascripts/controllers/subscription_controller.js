@@ -17,5 +17,12 @@ Muser.SubscriptionController = Ember.ObjectController.extend({
                 json.subscription.entries = record.get("data").attributes.entries.concat(json.subscription.entries)
                 adapter.didFindRecord(store, Muser.Subscription, json, controller.get("content")["id"]);
         });
+    },
+
+    markViewed: function(entry){
+        entry["viewed"] = true;
+        this.get("content").get('stateManager').goToState('updated');
+        this.get("content").save();
+        this.get('content').get('transaction').commit();
     }
 });
