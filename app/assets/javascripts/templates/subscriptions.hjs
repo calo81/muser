@@ -14,13 +14,18 @@
             Add Subscription
 </button>
 
-{{#each controller}}
+
   <li>
+	<ul id="subscriptionsList">
+   {{#each controller}}
+    <li>		
     {{#view Muser.SubscriptionListItemView contentBinding="this"}}
     {{view.content.title}}
     {{#view Ember.Button target="view" action="deleteClicked" isVisibleBinding="view.focused"}}
             Delete
     {{/view}}
     {{/view}}
-  </li>
-{{/each}}
+	{{/each}}
+   </ul>
+   </li>
+ </li>

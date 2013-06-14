@@ -43,7 +43,7 @@ gem 'omniauth-google-oauth2'
 gem 'mongoid'
 gem 'devise'
 gem 'paperclip'
-gem 'opml_saw'
+gem 'opml_saw', :git => "git://github.com/feedbin/opml_saw.git", :branch => "master"
 gem 'ember-rails'
 gem 'ember-source'
 

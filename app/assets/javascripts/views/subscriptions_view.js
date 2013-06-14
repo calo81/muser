@@ -1,7 +1,7 @@
 Muser.SubscriptionsView = Ember.View.extend({
     templateName: 'subscriptions',
     elementId: 'subscriptions',
-    classNames: ['scrollable']
+    classNames: ['scrollable'],
 });
 
 Muser.TextField = Ember.TextField.extend(Ember.TargetActionSupport, {
@@ -31,6 +31,11 @@ Muser.SubscriptionListItemView = Ember.View.extend({
 
     mouseLeave: function(){
         this.set("focused",false);
+    },
+    didInsertElement: function() {
+		$(document).ready(function(){
+		  $('#subscriptionsList li:nth-child(odd)').addClass('alternate');
+		});
     }
 
 });

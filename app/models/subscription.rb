@@ -1,5 +1,5 @@
 require 'feedzirra'
-require 'opml'
+require 'opml_saw'
 class Subscription
   include Mongoid::Document
 
@@ -24,10 +24,12 @@ class Subscription
     subscription
   end
 
-  def self.create_from_opml(opml_xml)
+  def self.create_from_opml(opml_xml, user)
     opml = OpmlSaw::Parser.new(opml_xml)
     opml.parse
-
+    opml.feeds.each do |feed|
+      self.create_from_url(feed[:xml_url],user)
+    end
   end
 
   def reload

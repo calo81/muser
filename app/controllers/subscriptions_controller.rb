@@ -39,7 +39,7 @@ class SubscriptionsController < AuthenticatedController
   end
 
   def upload
-    Subscription.create_from_opml(params[:opml].read)
+    Subscription.create_from_opml(params[:opml].read, current_user)
     redirect_to "/"
   end
 end
