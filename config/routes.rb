@@ -4,6 +4,7 @@ Muser::Application.routes.draw do
 
   root :to => 'home#index'
   match '/auth/:provider/callback', to: 'sessions#create'
+  match '/subscriptions/upload', :to => 'subscriptions#upload'
 
   resources :subscriptions
 end

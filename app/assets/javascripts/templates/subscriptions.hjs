@@ -1,4 +1,14 @@
+
+
 <li class="nav-header">Subscriptions</li>
+<li>
+
+  <form action="/subscriptions/upload" method="post" enctype="multipart/form-data">
+   <label name="opml">Import OPML file</label>
+   <input type="file" name="opml">
+   <input type="submit" value="upload"/>
+  </form>
+</li>
 {{view Muser.TextField target="controller" action="addSubscription" valueBinding="controller.newSubscriptionName"}}
 <button {{action "addSubscription"}}>
             Add Subscription

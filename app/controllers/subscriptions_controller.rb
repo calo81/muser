@@ -37,4 +37,9 @@ class SubscriptionsController < AuthenticatedController
     Subscription.find(params[:id]).update_attributes(params[:subscription])
     render :json => {message: 'OK'}, :status => 204
   end
+
+  def upload
+    Subscription.create_from_opml(params[:opml].read)
+    redirect_to "/"
+  end
 end

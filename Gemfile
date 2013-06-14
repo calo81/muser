@@ -42,6 +42,8 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'mongoid'
 gem 'devise'
+gem 'paperclip'
+gem 'opml_saw'
 gem 'ember-rails'
 gem 'ember-source'
 
