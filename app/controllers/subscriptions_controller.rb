@@ -36,6 +36,7 @@ class SubscriptionsController < AuthenticatedController
   end
 
   def destroy
+    Entry.delete_all(subscription_id: params[:id])
     Subscription.find(params[:id]).destroy
     render :json => {message: 'OK'}, :status => 204
   end
