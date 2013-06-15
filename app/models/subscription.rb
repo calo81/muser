@@ -32,6 +32,10 @@ class Subscription
     end
   end
 
+  def self.full_text_search(text)
+    self.mongo_session.command(text: 'users', search: 'search string')
+  end
+
   def reload
     feed = Feedzirra::Feed.fetch_and_parse(feed_url)
     feed_json = JSON.parse(feed.to_json)
