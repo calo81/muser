@@ -1,5 +1,7 @@
 Muser.SubscriptionsController = Ember.ArrayController.extend({
     newSubscriptionName: null,
+    searchValue: null,
+    selectedSubscription: null,
     addSubscription: function () {
         var subscription = Muser.Subscription.createRecord({
             url: this.get("newSubscriptionName")
@@ -26,10 +28,19 @@ Muser.SubscriptionsController = Ember.ArrayController.extend({
         return $.ajax("/subscriptions/"+record.id, "GET").
             then(function(json){
                 adapter.didFindRecord(store, Muser.Subscription, json, record.id);
+                record = Muser.Subscription.find(record.id)
                 controller.set("selectedSubscription", record);
                 // Now let's reset the page counter for the currentsubscription scroll
                 controller.controllerFor("subscription").set("page",0);
             });
 
+    },
+
+    searchEntries: function(){
+        var controller = this;
+        return $.ajax("/subscriptions/search?text="+this.get("searchValue"), "GET").
+            then(function(json){
+                controller.showEntries(json['subscription']);
+            });
     }
 });

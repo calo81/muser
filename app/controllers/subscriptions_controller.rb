@@ -14,7 +14,11 @@ class SubscriptionsController < AuthenticatedController
       page = 0
     end
     subscription = Subscription.find(params[:id])
-    entries = Entry.where(:subscription_id => params[:id]).skip(page*25).limit(25).to_a
+    if(subscription.title.start_with?("search"))
+      entries = Entry.full_text_search(subscription.title.split(':')[1])['results'].map{|result| result['obj']}
+    else
+      entries = Entry.where(:subscription_id => params[:id]).skip(page*25).limit(25).to_a
+    end
     subscription_json = subscription.as_json
     subscription_json['entries'] = entries
     render :json =>  {:subscription => subscription_json}
@@ -32,7 +36,9 @@ class SubscriptionsController < AuthenticatedController
   end
   
   def search
-    Subscription.full_text_search(params[:text])
+
+    subscription = Subscription.find_or_create_by(:title => "search:#{params[:text]}", :user => current_user)
+    render :json => {:subscription => subscription}
   end
 
   def destroy

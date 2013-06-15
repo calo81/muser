@@ -24,7 +24,7 @@ Muser.SubscriptionController = Ember.ObjectController.extend({
         $.ajax({
             type: "PUT",
             url: "/entries/"+entry["id"],
-            data: entry,
+            data: {'entry':entry},
             success: function(){}
         });
     }

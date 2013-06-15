@@ -1,31 +1,36 @@
-
-
 <li class="nav-header">Subscriptions</li>
+<li>{{view Muser.TextField target="controller" action="searchEntries" valueBinding="controller.searchValue"}}
+    <button
+    {{action "searchEntries"}}>
+    Search Entries
+    </button></li>
 <li>
 
-  <form action="/subscriptions/upload" method="post" enctype="multipart/form-data">
-   <label name="opml">Import OPML file</label>
-   <input type="file" name="opml">
-   <input type="submit" value="upload"/>
-  </form>
+    <form action="/subscriptions/upload" method="post" enctype="multipart/form-data">
+        <label name="opml">Import OPML file</label>
+        <input type="file" name="opml">
+        <input type="submit" value="upload"/>
+    </form>
 </li>
 {{view Muser.TextField target="controller" action="addSubscription" valueBinding="controller.newSubscriptionName"}}
 <button {{action "addSubscription"}}>
-            Add Subscription
+Add Subscription
 </button>
 
 
-  <li>
-	<ul id="subscriptionsList">
-   {{#each controller}}
-    <li>		
-    {{#view Muser.SubscriptionListItemView contentBinding="this"}}
-    {{view.content.title}}
-    {{#view Ember.Button target="view" action="deleteClicked" isVisibleBinding="view.focused"}}
+<li>
+    <ul id="subscriptionsList">
+        {{#each controller}}
+
+        {{#view Muser.SubscriptionListItemView contentBinding="this"}}
+        <li>
+            {{view.content.title}}
+            {{#view Ember.Button target="view" action="deleteClicked" isVisibleBinding="view.focused"}}
             Delete
-    {{/view}}
-    {{/view}}
-	{{/each}}
-   </ul>
-   </li>
- </li>
+            {{/view}}
+        </li>
+        {{/view}}
+        {{/each}}
+    </ul>
+
+</li>

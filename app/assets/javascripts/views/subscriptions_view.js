@@ -34,7 +34,7 @@ Muser.SubscriptionListItemView = Ember.View.extend({
     },
     didInsertElement: function() {
 		$(document).ready(function(){
-		  $('#subscriptionsList li:nth-child(odd)').addClass('alternate');
+		  $('#subscriptionsList div:nth-child(odd)').addClass('alternate');
 		});
     }
 
