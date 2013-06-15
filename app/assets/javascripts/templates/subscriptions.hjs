@@ -1,10 +1,12 @@
-<li class="nav-header">Subscriptions</li>
 <li>{{view Muser.TextField target="controller" action="searchEntries" valueBinding="controller.searchValue"}}
     <button
     {{action "searchEntries"}}>
     Search Entries
     </button></li>
 <li>
+
+<li class="nav-header">Subscriptions</li>
+
 
     <form action="/subscriptions/upload" method="post" enctype="multipart/form-data">
         <label name="opml">Import OPML file</label>
