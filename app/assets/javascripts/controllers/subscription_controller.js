@@ -21,8 +21,11 @@ Muser.SubscriptionController = Ember.ObjectController.extend({
 
     markViewed: function(entry){
         entry["viewed"] = true;
-        this.get("content").get('stateManager').goToState('updated');
-        this.get("content").save();
-        this.get('content').get('transaction').commit();
+        $.ajax({
+            type: "PUT",
+            url: "/entries/"+entry["id"],
+            data: entry,
+            success: function(){}
+        });
     }
 });

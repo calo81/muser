@@ -9,12 +9,15 @@ class SubscriptionsController < AuthenticatedController
 
   def show
     if(params[:page])
-      subscription = (Subscription.where(:id => params[:id], :user_id => current_user.id).slice({:entries => [ params[:page].to_i * 25, 25 ]}).first)
+      page = params[:page]
     else
-      Subscription.find(params[:id]).reload
-      subscription = (Subscription.where(:id => params[:id], :user_id => current_user.id).slice({:entries => [0, 25]}).first)
+      page = 0
     end
-    render :json =>  {:subscription => subscription}
+    subscription = Subscription.find(params[:id])
+    entries = Entry.where(:subscription_id => params[:id]).skip(page*25).limit(25).to_a
+    subscription_json = subscription.as_json
+    subscription_json['entries'] = entries
+    render :json =>  {:subscription => subscription_json}
   end
 
   def create
@@ -34,11 +37,6 @@ class SubscriptionsController < AuthenticatedController
 
   def destroy
     Subscription.find(params[:id]).destroy
-    render :json => {message: 'OK'}, :status => 204
-  end
-
-  def update
-    Subscription.find(params[:id]).update_attributes(params[:subscription])
     render :json => {message: 'OK'}, :status => 204
   end
 

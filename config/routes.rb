@@ -1,5 +1,8 @@
 Muser::Application.routes.draw do
 
+
+
+
   devise_for :users
 
   root :to => 'home#index'
@@ -7,4 +10,5 @@ Muser::Application.routes.draw do
   match '/subscriptions/upload', :to => 'subscriptions#upload'
 
   resources :subscriptions
+  resources :entries
 end
