@@ -7,6 +7,7 @@ class Entry
   field :title
   field :summary
   field :viewed
+  field :published
 
   index(
       { "summary" => 'text', "title" => 'text'}

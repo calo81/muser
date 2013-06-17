@@ -18,7 +18,7 @@ class SubscriptionsController < AuthenticatedController
       entries = Entry.full_text_search(subscription.title.split(':')[1])['results'].map{|result| result['obj']}
     else
       subscription.reload
-      entries = Entry.where(:subscription_id => params[:id]).skip(page*25).limit(25).to_a
+      entries = Entry.where(:subscription_id => params[:id]).order_by("published DESC").skip(page.to_i*25).limit(25).to_a
     end
     subscription_json = subscription.as_json
     subscription_json['entries'] = entries
